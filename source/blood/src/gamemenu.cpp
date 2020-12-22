@@ -223,6 +223,10 @@ void CGameMenuMgr::Process(void)
     event.at0 = 0;
     event.at2 = 0;
     char key;
+#ifdef __PSP2__
+    // Vita uses SDL for main menu input
+    handleevents();
+#endif
     if (!pActiveMenu->MouseEvent(event) && (key = keyGetScan()) != 0 )
     {
         keyFlushScans();

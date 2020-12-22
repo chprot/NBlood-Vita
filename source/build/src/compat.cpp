@@ -43,6 +43,9 @@ void LOG(const char *format, ...) {
 		fclose(log);
 	}
 }
+
+int32_t max (int32_t a, long b) {return a > (int32_t) b ? a : b;}
+int32_t min (int32_t a, long b) {return a < (int32_t) b ? a : b;}
 #endif
 
 ////////// PANICKING ALLOCATION FUNCTIONS //////////

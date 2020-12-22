@@ -13,6 +13,11 @@
 
 #ifdef __PSP2__
 # include <vitasdk.h>
+# ifndef MAXMINFIX
+# define MAXMINFIX
+int32_t max (int32_t a, long b);
+int32_t min (int32_t a, long b);
+# endif
 #endif
 
 ////////// Compiler detection //////////
